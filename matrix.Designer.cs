@@ -39,6 +39,8 @@ namespace Matrix_new
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@ namespace Matrix_new
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gridSizeToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(340, 12);
+            this.menuStrip1.Location = new System.Drawing.Point(402, 12);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(91, 28);
             this.menuStrip1.TabIndex = 3;
@@ -130,16 +132,56 @@ namespace Matrix_new
             this.toolStripMenuItem7.Text = "8*8";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(242, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 58);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Resume";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(134, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 58);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Pause";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // matrix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1056, 656);
+            this.ClientSize = new System.Drawing.Size(564, 617);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "matrix";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Matrix";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.OnLoad);
             this.menuStrip1.ResumeLayout(false);
@@ -152,8 +194,8 @@ namespace Matrix_new
         #endregion
 
         private System.Windows.Forms.Button Start;
-        private System.Windows.Forms.Button Pause;
-        private System.Windows.Forms.Button Stop;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gridSizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -164,7 +206,7 @@ namespace Matrix_new
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private bool bThreadStatus;
         public Thread Matrix_new;
-
+        
     }
 }
 
