@@ -11,6 +11,7 @@ using System.Threading;
 
 namespace Matrix_new
 {
+    
     public partial class matrix : Form
     {
         public int m_width;
@@ -22,35 +23,24 @@ namespace Matrix_new
         public int m_counter = 2;
         public int m_size = 8;
 
+    
         public const int DEFAULT_X_OFFSET = 60;
         public const int DEFAULT_Y_OFFSET = 100;
         public const int DEFAULT_NO_ROWS = 2;
         public const int DEFAULT_NO_COLUMNS = 2;
-        public const int DEFAULT__WIDTH = 40;
-        public const int DEFAULT_HEIGHT = 40;
+        public const int DEFAULT__WIDTH = 60;
+        public const int DEFAULT_HEIGHT = 60;
         public matrix()
         {
             InitializeComponent();
             Intialize();
-            InitializeComponent();
-            bThreadStatus = false;
+            
         }
-
+       
         private void Start_Click(object sender, EventArgs e)
         {
-            Matrix_new = new Thread(new ThreadStart(ThreadCounter));
+            Matrix_new = new Thread(ThreadCounter);
             Matrix_new.Start();
-            bThreadStatus = true;
-        }
-
-        private void Pause_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Stop_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void gridSizeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,7 +101,9 @@ namespace Matrix_new
         {
             Graphics boardLayout = this.CreateGraphics();
             Pen layoutPen = new Pen(Color.Red);
-            layoutPen.Width = 3;
+            Pen layoutPen1 = new Pen(Color.Black);
+            layoutPen.Width = 6;
+            layoutPen1.Width = 6;
 
             // boardLayout.DrawLine(layoutPen, 0, 0, 100, 0);
             int X = DEFAULT_X_OFFSET;
@@ -119,7 +111,7 @@ namespace Matrix_new
 
             for (int i = 0; i <= m_counter; i++)
             {
-                boardLayout.DrawLine(layoutPen, X, Y, X + this.m_width * this.m_counter, Y);
+                boardLayout.DrawLine(layoutPen1, X, Y, X + this.m_width * this.m_counter, Y);
                 Y = Y + this.m_height;
             }
             X = DEFAULT_X_OFFSET;
@@ -138,18 +130,42 @@ namespace Matrix_new
                 while (true)
                 {
                     m_counter++;
-
                     if (m_counter > m_size)
                     {
-                        m_counter = 2;
+                        m_counter=2; 
                     }
-
                     Invalidate();
                     Thread.Sleep(500);
+                    if (_pause)
+                    {
+                        lock (_threadLock)
+                        {
+                            Monitor.Wait(_threadLock);
+                        }
+                    }
                 }
+                
             }
             catch (Exception ex)
-            { }
+            { }           
+        }
+
+        private bool _pause = false;
+        private object _threadLock = new object();
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _pause = true;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _pause = false;
+            lock (_threadLock)
+            {
+                Monitor.Pulse(_threadLock);
+            }
         }
     }
 }
