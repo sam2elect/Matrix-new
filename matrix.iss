@@ -4,7 +4,7 @@
 #define MyAppName "Matrix"
 #define MyAppVersion "1.5"
 #define MyAppPublisher "Samir kumar"
-#define MyAppURL "https://www.ktsinfotech.com/"
+#define MyAppURL "https://github.com/sam2elect/Matrix-new"
 #define MyAppExeName "Matrix new.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".exe"
