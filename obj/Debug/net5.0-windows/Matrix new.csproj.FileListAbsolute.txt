@@ -1,0 +1,19 @@
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\Matrix new.exe
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\Matrix new.deps.json
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\Matrix new.runtimeconfig.json
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\Matrix new.runtimeconfig.dev.json
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\Matrix new.dll
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\ref\Matrix new.dll
+E:\Kts\repo\Matrix new\bin\Debug\net5.0-windows\Matrix new.pdb
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.csproj.AssemblyReference.cache
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix_new.matrix.resources
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.csproj.GenerateResource.cache
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.GeneratedMSBuildEditorConfig.editorconfig
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.AssemblyInfoInputs.cache
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.AssemblyInfo.cs
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.csproj.CoreCompileInputs.cache
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.dll
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\ref\Matrix new.dll
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.pdb
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix new.genruntimeconfig.cache
+E:\Kts\repo\Matrix new\obj\Debug\net5.0-windows\Matrix_new.Properties.Resources.resources
